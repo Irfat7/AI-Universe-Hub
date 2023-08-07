@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500&family=Work+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="container-fluid text-center">
+    <p class="fw-semibold fs-1 my-3 my-md-4">AI UNIVERSE HUB</p>
+    <button class="btn fs-6 fw-semibold rounded-4 px-4 py-2 mb-2" style="color: white; background: #EB5757;">Sort By
+      Date</button>
+  </header>
+
+  <main class="container-fluid">
+    <div class="d-flex justify-content-center justify-content-md-evenly flex-wrap px-md-3 parent">
+      <div class="card col-12 col-md-2 p-3 my-3 my-md-4"
+        style="width: 350px; border:  1px solid rgba(17, 17, 17, 0.10)">
+        <img src="https://imgv3.fotor.com/images/blog-cover-image/part-blurry-image.jpg" class="card-img-top rounded-3"
+          alt="..." />
+        <div class="card-body p-0">
+          <h1 class="fs-4 fw-semibold my-3">Features</h1>
+          <ol class="px-4 mb-3">
+            <li>Natural language processing</li>
+            <li>Contextual understanding</li>
+            <li>Text generation</li>
+          </ol>
+          <hr />
+          <div class="container-fluid mt-3 d-flex justify-content-between">
+            <div>
+              <h1 class="fs-4 fw-semibold mb-2">ChatGPT</h1>
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6.75 3V5.25M17.25 3V5.25M3 18.75V7.5C3 6.90326 3.23705 6.33097 3.65901 5.90901C4.08097 5.48705 4.65326 5.25 5.25 5.25H18.75C19.3467 5.25 19.919 5.48705 20.341 5.90901C20.7629 6.33097 21 6.90326 21 7.5V18.75M3 18.75C3 19.3467 3.23705 19.919 3.65901 20.341C4.08097 20.7629 4.65326 21 5.25 21H18.75C19.3467 21 19.919 20.7629 20.341 20.341C20.7629 19.919 21 19.3467 21 18.75M3 18.75V11.25C3 10.6533 3.23705 10.081 3.65901 9.65901C4.08097 9.23705 4.65326 9 5.25 9H18.75C19.3467 9 19.919 9.23705 20.341 9.65901C20.7629 10.081 21 10.6533 21 11.25V18.75M12 12.75H12.008V12.758H12V12.75ZM12 15H12.008V15.008H12V15ZM12 17.25H12.008V17.258H12V17.25ZM9.75 15H9.758V15.008H9.75V15ZM9.75 17.25H9.758V17.258H9.75V17.25ZM7.5 15H7.508V15.008H7.5V15ZM7.5 17.25H7.508V17.258H7.5V17.25ZM14.25 12.75H14.258V12.758H14.25V12.75ZM14.25 15H14.258V15.008H14.25V15ZM14.25 17.25H14.258V17.258H14.25V17.25ZM16.5 12.75H16.508V12.758H16.5V12.75ZM16.5 15H16.508V15.008H16.5V15Z"
+                    stroke="#585858" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="align-self-center">11/01/2022</span>
+              </div>
+            </div>
+            <div class="align-self-center">
+              <button type="button" class="btn rounded-circle btn-outline-none" data-bs-toggle="modal"
+                data-bs-target="#detailsModal" style="width: 50px; height: 50px; background-color: #fef7f7">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M4.5 12H19.5M19.5 12L12.75 5.25M19.5 12L12.75 18.75" stroke="#EB5757" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="detailsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-custom-height py-2 py-md-4 px-md-2">
+        <div class="button-container">
+          <button type="button" class="btn p-0 rounded-circle position-absolute end-0 top-0" data-bs-dismiss="modal"
+            aria-label="Close" style="background-color: #EB5757;width: 52px;height: 52px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+              <path d="M22.3033 11.6967L11.6967 22.3033M22.3033 22.3033L11.6967 11.6967" stroke="white"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body d-flex flex-column flex-lg-row gap-3 justify-content-center">
+
+          <div class="card px-3 py-4 w-100" style="border-radius: 16px; border: 1px solid #EB5757;background: rgba(235, 87, 87, 0.05);">
+            <div class="container-fluid px-0 mb-2 mb-md-4">
+              <p class="fs-5 fs-md-3 fw-semibold fw-md-bold">ChatGPT is an AI-powered chatbot platform that uses
+                OpenAI's GPT technology to simulate human
+                conversation.</p>
+            </div>
+            <div class="container-fluid px-0 d-flex justify-content- mb-2 mb-md-4">
+              <p class="w-100 fw-semibold text-center me-2 rounded-2 py-4" style="background-color: white;color: #03A30A;">$10/month Basic</p>
+              <p class="w-100 fw-semibold text-center me-2 rounded-2 py-4" style="background-color: white; color: #F28927;">$50/month<br>Pro</p>
+              <p class="w-100 fw-semibold text-center rounded-2 py-4" style="background-color: white; color: #EB5757;">Contact us Enterprise</p>
+            </div>
+            <div class="container-fluid p-0 d-flex justify-content-between">
+              <div>
+                <p class="fs-4 fw-semibold">Features</p>
+                <ul style="color: #585858;">
+                  <li>Customizable responses</li>
+                  <li>Multilingual support</li>
+                  <li>Seamless integration</li>
+                </ul>
+              </div>
+              <div>
+                <p class="fs-4 fw-semibold">Integration</p>
+                <ul style="color: #585858;">
+                  <li>FB Messenger</li>
+                  <li>Stack</li>
+                  <li>Telegram</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card px-3 py-4 w-100" style="border-radius: 16px;">
+              <div class="container-fluid logo-container">
+
+              </div>
+            <div class="card-body text-center">
+              <p class="fs-4 fw-semibold">Hi, how are you doing today?</p>
+              <p class="" style="color: #585858;">I'm doing well, thank you for asking. How can I assist you today?</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center my-4">
+    <button class="btn fs-6 fw-semibold rounded-4 px-4 py-2 mb-2" style="color: white; background: #EB5757;">See
+      More</button>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
