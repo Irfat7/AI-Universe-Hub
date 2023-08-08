@@ -2,17 +2,28 @@ let totalResultsFromAPI = null;
 let firstPortion = null;
 let finalPortion = null;
 
-const loaderControl = () => {
+const loaderControl = (showLoader) => {
   const loader = document.querySelector(".loader-container");
-  const loaderOpacityValue = window.getComputedStyle(loader).opacity;
-  loaderOpacityValue ? (loader.style.opacity = 0) : (loader.style.opacity = 1);
-  setTimeout(() => {
-    loaderOpacityValue
-      ? loader.classList.add("d-none")
-      : loader.classList.add("d-flex");
-  }, 600);
+  
+  if(showLoader){
+    console.log("if")
+    loader.style.opacity = 1
+    loader.classList.remove("d-none")
+    setTimeout(()=>{
+      loader.classList.add("d-flex")
+    },600)
+  }
+  else{
+    console.log("elif")
+    loader.style.opacity = 0
+    loader.classList.remove("d-flex")
+    setTimeout(()=>{
+      loader.classList.add("d-none")
+    },600)
+  }
 };
 
+//dynamic content of modal
 const expand = (description, image) => {
   const aiDescription = document.querySelector(".ai-description");
   const logoContainer = document.querySelector(".logo-container");
@@ -28,6 +39,7 @@ const clearAll = () => {
 };
 
 const showMore = () => {
+  loaderControl(true)
   const showMoreButton = document.querySelector(".show-more-button");
   showMoreButton.style.display = "none";
   processResults(finalPortion);
@@ -86,7 +98,7 @@ const showResult = async ({
   `;
 };
 
-const allImagsLoaded = () => {
+const allImagesLoaded = () => {
 
   const allImages = document.querySelectorAll("img");
   let imageCounter=0
@@ -117,10 +129,11 @@ const processResults = (results) => {
   results.forEach((element) => {
     showResult(element);
   });
-  allImagsLoaded();
+  allImagesLoaded();
 };
 
 const sortByDate = () => {
+  loaderControl(true)
   const showMoreButton = document.querySelector(".show-more-button");
   totalResultsFromAPI.sort(
     (a, b) => new Date(a.published_in) - new Date(b.published_in)
@@ -146,6 +159,7 @@ const makeAPICall = () => {
 };
 
 const startProcessing = () => {
+  loaderControl(true)
   makeAPICall();
 };
 
