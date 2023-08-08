@@ -39,7 +39,7 @@ const showResult = async ({
   image,
   name,
   published_in,
-  }) => {
+}) => {
   description =
     description ??
     "Artificial Intelligence (AI) is the simulation of human intelligence in machines, enabling tasks like learning, reasoning, problem-solving, and decision-making.";
@@ -86,11 +86,38 @@ const showResult = async ({
   `;
 };
 
+const allImagsLoaded = () => {
+
+  const allImages = document.querySelectorAll("img");
+  let imageCounter=0
+
+  //handling successful images
+  allImages.forEach((eachImage) => {
+    eachImage.addEventListener("load", ()=>{
+      imageCounter++
+      if(imageCounter===allImages.length){
+        loaderControl();
+      }
+    });
+  });
+
+  //handling failed images
+  allImages.forEach((eachImage) => {
+    eachImage.addEventListener("error", ()=>{
+      eachImage.src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Why-get-certified-in-Artificial-Intelligence.jpg"
+      imageCounter++
+      if(imageCounter===allImages.length){
+        loaderControl();
+      }
+    });
+  });
+};
+
 const processResults = (results) => {
   results.forEach((element) => {
     showResult(element);
   });
-  loaderControl();
+  allImagsLoaded();
 };
 
 const sortByDate = () => {
